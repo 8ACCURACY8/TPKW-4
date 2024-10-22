@@ -1,0 +1,20 @@
+<p>student works!</p>
+<div>
+    <h2>Add Student</h2>
+    <input [(ngModel)]="student.name" placeholder="Name">
+    <input [(ngModel)]="student.dateOfBirth" placeholder="Date of Birth">
+    <input [(ngModel)]="student.email" placeholder="Email">
+    <button (click)="addStudent()">Save</button>
+  </div>
+  
+  <div>
+    <h2>Student List</h2>
+    <ul>
+      <li *ngFor="let student of students">
+        {{student.name}} - {{student.email}}
+        <button (click)="editStudent(student)">Edit</button>
+        <button (click)="deleteStudent(student.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
